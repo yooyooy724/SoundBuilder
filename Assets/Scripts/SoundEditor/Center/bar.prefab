@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.686, g: 0.686, b: 0.686, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -121,12 +121,12 @@ MonoBehaviour:
     - {x: -0.29389253, y: -0.40450856}
     - {x: 0.29389274, y: -0.4045084}
     - {x: 0.4755282, y: 0.15450864}
-    _roundness: 5
-    _roundnessBottomLeft: 5
-    _roundnessBottomRight: 5
+    _roundness: 20
+    _roundnessBottomLeft: 20
+    _roundnessBottomRight: 20
     _roundnessPerCorner: 0
-    _roundnessTopLeft: 5
-    _roundnessTopRight: 5
+    _roundnessTopLeft: 20
+    _roundnessTopRight: 20
     _shapeType: 2
     _startAngle: 0
     _triangleOffset: 0.5
