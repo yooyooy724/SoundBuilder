@@ -48,7 +48,8 @@ public class SoundSpectrum : MonoBehaviour
 
             heights[i] = Mathf.Max(heightValue, heights[i]);
             bars[i].sizeDelta = new Vector2(5, 100 * heights[i]);
-            heights[i] /= 1.2f; 
+            heights[i] -= 0.04f;
+            heights[i] /= 1.15f;
         }
 
         //for (int i = 1; i < spectrum.Length - 1; i++)
