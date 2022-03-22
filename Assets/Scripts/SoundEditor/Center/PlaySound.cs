@@ -7,7 +7,6 @@ using UniRx;
 public class PlaySound : MonoBehaviour
 {
 	[SerializeField] AudioSource audioSource;
-	[SerializeField] private AudioClip sound;
     [SerializeField] Button button;
 	private PlaySoundInfomations SoundInfo;
 
@@ -16,12 +15,14 @@ public class PlaySound : MonoBehaviour
     {
 		SoundInfo = gameObject.GetComponent<PlaySoundInfomations>();
 
-		this.ObserveEveryValueChanged(_ => _.SoundInfo.sound).Subscribe(_ => this.sound = _);
+		//this.ObserveEveryValueChanged(_ => _.SoundInfo.sound).Subscribe(_ => this.sound = _);
+		this.ObserveEveryValueChanged(_ => _.SoundInfo.volume).Subscribe(_ => audioSource.volume = _);
+		this.ObserveEveryValueChanged(_ => _.SoundInfo.speed).Subscribe(_ => audioSource.pitch = Mathf.Pow(3, _));
 
 		button.onClick.AddListener(() =>
 		{
-			audioSource.PlayOneShot(sound);
-			Debug.Log("sound played");
+			audioSource.PlayOneShot(SoundInfo.sound);
+			//Debug.Log("sound played");
 		});
     }
 }

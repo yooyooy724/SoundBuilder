@@ -38,7 +38,7 @@ public class GenerateAudioSelectButtons : MonoBehaviour
             {
                 Destroy(child.gameObject);
             }
-            Debug.Log(generateNum);
+            //Debug.Log(generateNum);
         }
         
         for (int i = 0; i < generateNum; i++)
@@ -48,7 +48,7 @@ public class GenerateAudioSelectButtons : MonoBehaviour
             _object.transform.parent = this.transform;
             _object.GetComponent<SoundSelectButtonsManager>().SetId(i);
             _objects.Add(_object);
-            Debug.Log("Generated");
+            //Debug.Log("Generated");
         }
     }
 }
